@@ -6,6 +6,15 @@ class User
          :recoverable, :rememberable, :trackable, :validatable
 
   ## Database authenticatable
+  field :name,              type: String, default: ""
+  field :last_name,              type: String, default: ""
+  field :cellphone,              type: String, default: ""
+  field :site,              type: String, default: ""
+  field :address,              type: String, default: ""
+  field :car,              type: Boolean, default: ""
+  field :spaces,              type: String, default: ""
+  field :address,              type: String, default: ""
+  field :photo,              type: String, default: ""
   field :email,              type: String, default: ""
   field :encrypted_password, type: String, default: ""
 

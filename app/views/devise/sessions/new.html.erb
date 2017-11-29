@@ -6,9 +6,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Lumino - Login</title>
-
-  <link href="Style1.css" rel="stylesheet">
-
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/datepicker3.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
 	<!--[if lt IE 9]>
 	<script src="js/html5shiv.js"></script>
 	<script src="js/respond.min.js"></script>
@@ -22,15 +22,18 @@
 				<div class="panel-body">
 					<form role="form">
 						<fieldset>
+              <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 							<div class="form-group">
-								<input class="form-control" placeholder="E-mail" name="email" type="email" autofocus="">
-							</div>
-							<div class="form-group">
-								<input class="form-control" placeholder="Password" name="password" type="password" value="">
-							</div>
 
-							<a href="index.html" class="btn btn-primary login-btn">Login</a></fieldset>
-              <%= render "devise/shared/links" %>
+                <%= f.email_field :email, autofocus: true , class: 'form-control',placeholder:"E-mail", name:"email", type:"email", autofocus:""%>
+							</div>
+							<div class="form-group">
+                <%= f.password_field :password, autocomplete: "off" ,class: 'form-control' ,placeholder:"Password" ,name:"password", type:"password", value:""%>
+							</div>
+							<a href="index.html" class="btn btn-primary btn-block">Login</a>
+            <% end %>
+          </fieldset>
+          <%= render "devise/shared/links" %>
 					</form>
 				</div>
 			</div>
@@ -41,3 +44,22 @@
 
 </body>
 </html>
+
+
+
+<!-- <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <fieldset>
+    <div class="form-group">
+      <%= f.email_field :email, autofocus: true %>
+    </div>
+    <div class="form-group">
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+    <div class="checkbox">
+      <% if devise_mapping.rememberable? -%>
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+      <% end -%>
+    </div>
+  </fieldset>
+<% end %> -->

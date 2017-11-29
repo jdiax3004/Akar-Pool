@@ -1,29 +1,62 @@
-<h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lumino - Login</title>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+  <link href="Style1.css" rel="stylesheet">
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="row">
+		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+			<div class="login-panel panel panel-default">
+				<div class="panel-heading">Sing Up</div>
+				<div class="panel-body">
+          <form role="form">
+						<fieldset>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+              <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-<%= render "devise/shared/links" %>
+              <div class="form-group">
+                <div class="col-md-6">
+                <label for="Firstname">First name</label>
+              <%= f.search_field :name, autofocus: true , class: 'form-control',placeholder:"Name", name:"name", type:"name", autofocus:""%>
+                </div>
+                <div class="col-md-6">
+                  <label for=Lastname>Last name</label>
+              <%= f.search_field :last_name, autofocus: true , class: 'form-control',placeholder:"Lastname", name:"lname", type:"lname", autofocus:""%>
+                </div>
+              <br>
+              </div>
+
+              <div class="form-group">
+                <div class="col-md-6">
+                <label for="Firstname">Cellphone</label>
+              <%= f.telephone_field :cellphone, autofocus: true , class: 'form-control',placeholder:"cellphone", name:"cellphone", type:"cellphone", autofocus:""%>
+                </div>
+              </div>
+
+            
+            <% end %>
+            <a href="index.html" class="btn btn-primary btn-block">Login</a>
+
+          </fieldset>
+          <%= render "devise/shared/links" %>
+					</form>
+				</div>
+			</div>
+		</div><!-- /.col-->
+	</div><!-- /.row -->
+
+
+
+</body>
+</html>

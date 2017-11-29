@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
-  layout "login"
+  before_action :authenticate_user!
   def index
   end
 end

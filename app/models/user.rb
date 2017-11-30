@@ -11,6 +11,8 @@ class User
   field :cellphone,              type: String, default: ""
   field :photo,              type: String, default: ""
   field :email,              type: String, default: ""
+  field :puntos,              type: Integer, default: ""
+  field :categoria,              type: String, default: ""
   field :encrypted_password, type: String, default: ""
 
   embeds_one :site, class_name: "Site"

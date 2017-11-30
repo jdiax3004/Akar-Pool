@@ -1,5 +1,6 @@
 class User
   include Mongoid::Document
+  include Mongoid::Paperclip
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -14,8 +15,10 @@ class User
   field :puntos,              type: Integer, default: ""
   field :categoria,              type: String, default: ""
   field :encrypted_password, type: String, default: ""
+  has_mongoid_attached_file :avatar
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
-  embeds_many :sites
+  belongs_to :site
 
   ## Recoverable
   field :reset_password_token,   type: String

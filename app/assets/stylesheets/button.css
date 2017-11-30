@@ -1,8 +1,11 @@
 .login-btnTrip {
-    background-color: #0086bc !important;
-    border-color: #0086bc !important;
-    color: white !important;
+    background-color: #ffffff !important;
+    border-color: #fff !important;
+    color: #0086bc !important;
     width: 100px;
+    border-radius: 31px 31px 31px 31px;
+    -moz-border-radius: 31px 31px 31px 31px;
+    -webkit-border-radius: 31px 31px 31px 31px;
 }
 
 .small_text{
@@ -28,11 +31,15 @@ font-size: 13px;
 .btn-block-login{
   font-size: 23px;
 }
+.btn-block1 {
+  display: block;
+  width: 50%;
+}
 .btn-block-signup{
   font-size: 21px;
 }
 
 .panel-body_T {
   padding: 15px;
-   background-color:#0086bc !important;
+  background-color:#0086bc !important;
 }

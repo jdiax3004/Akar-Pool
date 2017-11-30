@@ -3,3 +3,13 @@
     border-color: #000 !important;
     width: 100px;
 }
+
+.small_text{
+font-size: 13px;
+}
+.btn-block-login{
+  font-size: 23px;
+}
+.btn-block-signup{
+  font-size: 21px;
+}

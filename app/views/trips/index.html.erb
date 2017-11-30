@@ -6,7 +6,7 @@
 
 
   <tbody>
-    <% @trips.each do |trip| %>
+    <% @trips.where(:departure=>'5:50a.m.').each  do |trip| %>
 
 
     <div class="row">

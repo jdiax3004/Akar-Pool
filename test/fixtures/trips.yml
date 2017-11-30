@@ -6,7 +6,6 @@ one:
   car: 
   departure: 
   PlaceMarks: 
-  —no-stylesheets: MyString
 
 two:
   names: MyString
@@ -14,4 +13,3 @@ two:
   car: 
   departure: 
   PlaceMarks: 
-  —no-stylesheets: MyString

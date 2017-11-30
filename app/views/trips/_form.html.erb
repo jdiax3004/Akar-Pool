@@ -1,47 +1,81 @@
 <%= form_with(model: trip, local: true) do |form| %>
-  <% if trip.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(trip.errors.count, "error") %> prohibited this trip from being saved:</h2>
+<% if trip.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(trip.errors.count, "error") %> prohibited this trip from being saved:</h2>
 
-      <ul>
-      <% trip.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :names %>
-    <%= form.text_field :names, id: :trip_names %>
-  </div>
-
-  <div class="field">
-    <%= form.label :seats %>
-    <%= form.text_field :seats, id: :trip_seats %>
-  </div>
-
-  <div class="field">
-    <%= form.label :car %>
-    <%= form.text_field :car, id: :trip_car %>
-  </div>
-
-  <div class="field">
-    <%= form.label :departure %>
-    <%= form.text_field :departure, id: :trip_departure %>
-  </div>
-
-  <div class="field">
-    <%= form.label :PlaceMarks %>
-    <%= form.text_field :PlaceMarks, id: :trip_PlaceMarks %>
-  </div>
-
-  <div class="field">
-    <%= form.label :—no-stylesheets %>
-    <%= form.text_field :—no-stylesheets, id: :trip_—no-stylesheets %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <ul>
+    <% trip.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
 <% end %>
+<center>
+  <div class="row">
+
+    <div class="panel-body">
+      <div class="form-group">
+        <div class="col-md-6">
+          <div class="panel panel-teal">
+            <div class="panel-heading">  <%= form.label :From_Where_to_Where %></div>
+            <div class="panel-body">
+              <%= form.text_field :names, id: :trip_names, placeholder:"Escazu to Hatillo"%>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-6">
+          <div class="panel panel-teal">
+            <div class="panel-heading">  <%= form.label :From_Where_to_Where %></div>
+            <div class="panel-body">
+              <%= form.text_field :names, id: :trip_names, placeholder:"Escazu to Hatillo"%>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div class="row">
+          <div class="col-md-8 col-md-offset-4">
+            <div class="field">
+              <%= form.label :From_Where_to_Where %>
+              <%= form.text_field :names, id: :trip_names, placeholder:"Escazu to Hatillo"%>
+            </div>
+          </div>
+          <div class="col-md-8 col-md-offset-4">
+            <div class="field">
+              <%= form.label :From_Where_to_Where %>
+              <%= form.text_field :names, id: :trip_names, placeholder:"Escazu to Hatillo"%>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="field">
+        <%= form.label :seats %>
+        <%= form.text_field :seats, id: :trip_seats %>
+      </div>
+
+      <div class="field">
+        <%= form.label :car %>
+        <%= form.text_field :car, id: :trip_car %>
+      </div>
+
+      <div class="field">
+        <%= form.label :departure %>
+        <%= form.text_field :departure, id: :trip_departure %>
+      </div>
+
+      <div class="field">
+        <%= form.label :PlaceMarks %>
+        <%= form.text_field :PlaceMarks, id: :trip_PlaceMarks %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+    </div>
+  </div>
+
+  <% end %>

@@ -17,7 +17,7 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create trip" do
     assert_difference('Trip.count') do
-      post trips_url, params: { trip: { PlaceMarks: @trip.PlaceMarks, car: @trip.car, departure: @trip.departure, names: @trip.names, seats: @trip.seats, —no-stylesheets: @trip.—no-stylesheets } }
+      post trips_url, params: { trip: { PlaceMarks: @trip.PlaceMarks, car: @trip.car, departure: @trip.departure, names: @trip.names, seats: @trip.seats } }
     end
 
     assert_redirected_to trip_url(Trip.last)
@@ -34,7 +34,7 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update trip" do
-    patch trip_url(@trip), params: { trip: { PlaceMarks: @trip.PlaceMarks, car: @trip.car, departure: @trip.departure, names: @trip.names, seats: @trip.seats, —no-stylesheets: @trip.—no-stylesheets } }
+    patch trip_url(@trip), params: { trip: { PlaceMarks: @trip.PlaceMarks, car: @trip.car, departure: @trip.departure, names: @trip.names, seats: @trip.seats } }
     assert_redirected_to trip_url(@trip)
   end
 

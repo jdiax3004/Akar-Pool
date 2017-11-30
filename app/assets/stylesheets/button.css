@@ -1,3 +1,21 @@
+.login-btnTrip {
+    background-color: #0086bc !important;
+    border-color: #0086bc !important;
+    color: white !important;
+    width: 100px;
+}
+
+.small_text{
+font-size: 13px;
+}
+.btn-block-login{
+  font-size: 23px;
+}
+.btn-block-signup{
+  font-size: 21px;
+}
+
+
 .login-btn {
     background-color: #000 !important;
     border-color: #000 !important;

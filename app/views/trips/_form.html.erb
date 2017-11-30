@@ -66,7 +66,7 @@
             <div class="panel panel-Aka">
               <div class="panel-heading">  <%= form.label :What_Do_You_Pass_By? %></div>
               <div class="panel-body">
-                <%= form.text_field :placemarks, id: :trip_PlaceMarks  ,placeholder:"'Walmart San Sebastian, Comercial del Sur,Parque De La Paz'", class:'form-control_2'%>
+                <%= form.text_field :placemarks, id: :trip_placemarks  ,placeholder:"'Walmart San Sebastian, Comercial del Sur,Parque De La Paz'", class:'form-control_2'%>
 
               </div>
             </div>
@@ -76,7 +76,8 @@
 
 
       <div class="actions">
-        <%= form.submit %>
+<br/>
+     <%= form.submit "Create Trip", class:"btn login-btnTrip btn-block btn-block-login" %>
       </div>
     </div>
   </div>

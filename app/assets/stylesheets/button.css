@@ -62,3 +62,7 @@ font-size: 13px;
   padding: 15px;
   background-color:#0086bc !important;
 }
+
+.redondo {
+  border-radius: 50%;
+}

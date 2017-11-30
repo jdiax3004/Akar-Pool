@@ -101,7 +101,7 @@
   				</a>
   			</li>
   			<li>
-          <%= link_to(raw('<em class="fa fa-power-off">&nbsp;</em> Logout'), destroy_user_session_path) %>
+          <%= link_to(raw('<em class="fa fa-power-off">&nbsp;</em> Logout'), destroy_user_session_path, :method => :delete) %>
           <!-- <a href="login.html"><em class="fa fa-power-off">&nbsp;</em> Logout</a> -->
         </li>
   		</ul>

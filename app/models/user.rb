@@ -9,10 +9,11 @@ class User
   field :name,              type: String, default: ""
   field :last_name,              type: String, default: ""
   field :cellphone,              type: String, default: ""
-  field :site,              type: String, default: ""
   field :photo,              type: String, default: ""
   field :email,              type: String, default: ""
   field :encrypted_password, type: String, default: ""
+
+  embeds_one :site, class_name: "Site"
 
   ## Recoverable
   field :reset_password_token,   type: String

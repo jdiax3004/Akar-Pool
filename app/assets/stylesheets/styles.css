@@ -338,7 +338,7 @@ a.label:hover, a.label:focus {
   font-size: 17px; }
 
 .panel-primary > .panel-heading {
-  background-color: #30a5ff;
+  background-color: #0086bc;
   color: #fff;
   border: none; }
 
@@ -377,7 +377,7 @@ a.label:hover, a.label:focus {
   color: #fff; }
 
 .panel-teal {
-  background: #1ebfae;
+  background: #0086bc;
   color: #fff; }
 
 .panel-orange {

@@ -43,7 +43,7 @@
 }
 .form-control_trip::-ms-expand {
   text-align: center;
-  
+
   background-color: transparent;
   border: 0;
 }
@@ -95,3 +95,10 @@ input.form-control_2 {
 
 .has-error .form-control_2, .has-error .form-control_2:focus {
   border: 1px solid #f9243f; }
+
+
+  .panel-info > .panel-heading {
+  background-color: #0086bc !important;
+  color: #fff;
+  border: none;
+  }

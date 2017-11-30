@@ -18,6 +18,25 @@ font-size: 13px;
   font-size: 21px;
 }
 
+.login-btnTrip1 {
+    background-color: #0086bc !important;
+    border-color: #0086bc !important;
+    color: #fff !important;
+    width: 100%;
+    border-radius: 31px 31px 31px 31px;
+    -moz-border-radius: 31px 31px 31px 31px;
+    -webkit-border-radius: 31px 31px 31px 31px;
+}
+
+.small_text{
+font-size: 13px;
+}
+.btn-block-login{
+  font-size: 23px;
+}
+.btn-block-signup{
+  font-size: 21px;
+}
 
 .login-btn {
     background-color: #000 !important;

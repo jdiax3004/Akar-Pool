@@ -1,0 +1,97 @@
+.form-control_trip {
+  display: block;
+  width: 100%;
+  height: 34px;
+  text-align: center;
+  padding: 6px 12px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1;
+  color: #0086bc;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, );
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-control_trip:focus {
+  border-color: #66afe9;
+  text-align: center;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+.form-control_trip::-moz-placeholder {
+  color: #999;
+  text-align: center;
+
+  opacity: 1;
+}
+.form-control_trip:-ms-input-placeholder {
+  text-align: center;
+
+  color: #999;
+}
+.form-control_trip::-webkit-input-placeholder {
+  text-align: center;
+
+  color: #999;
+}
+.form-control_trip::-ms-expand {
+  text-align: center;
+  
+  background-color: transparent;
+  border: 0;
+}
+.form-control_trip[disabled],
+.form-control_trip[readonly],
+fieldset[disabled] .form-control_trip {
+  background-color: #eee;
+  opacity: 1;
+}
+.form-control_trip[disabled],
+fieldset[disabled] .form-control_trip {
+  cursor: not-allowed;
+}
+textarea.form-control_trip {
+  height: auto;
+}
+
+input.form-control_2 {
+  width: 100%;
+  text-align: center;
+
+  border: 1px solid #ddd;
+  box-shadow: none;
+  height: 46px;
+  border-radius: 31px 31px 31px 31px;
+  -moz-border-radius: 31px 31px 31px 31px;
+  -webkit-border-radius: 31px 31px 31px 31px; }
+
+
+
+.bootstrap-table input.form-control_2 {
+  height: 34px; }
+
+.input-group-btn .btn {
+
+  height: 46px; }
+
+.form-control_2:focus {
+  border: 1px solid #30a5ff;
+  text-align: center;
+  outline: 0;
+  box-shadow: inset 0px 0px 0px 1px #30a5ff; }
+
+.has-success .form-control_2, .has-success .form-control_2:focus {
+  border: 1px solid #8ad919; }
+
+.has-warning .form-control_2, .has-warning .form-control_2:focus {
+  border: 1px solid #ffb53e; }
+
+.has-error .form-control_2, .has-error .form-control_2:focus {
+  border: 1px solid #f9243f; }

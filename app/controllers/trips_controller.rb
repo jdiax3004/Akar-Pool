@@ -1,4 +1,5 @@
 class TripsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_trip, only: [:show, :edit, :update, :destroy]
 
   # GET /trips
@@ -69,6 +70,6 @@ class TripsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def trip_params
-      params.require(:trip).permit(:names, :seats, :car, :departure, :PlaceMarks)
+      params.require(:trip).permit(:names, :seats, :car, :departure, :placemarks)
     end
 end

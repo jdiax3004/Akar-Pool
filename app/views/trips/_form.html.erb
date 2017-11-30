@@ -14,12 +14,14 @@
 
   <div class="row">
 
+    <div class="panel-body_T">
     <div class="panel-body">
+
       <div class="row">
         <div class="form-group">
           <div class="col-md-6">
             <div class="panel panel-Aka">
-              <div class="panel-heading">  <%= form.label :From_Where_to_Where? %></div>
+              <div class="panel-heading " style="background-color: #0086bc;"><font color="white">  <%= form.label :From_Where_to_Where? %></font></div>
               <div class="panel-body">
                 <%= form.text_field :names, id: :trip_names, placeholder:"Escazu to Hatillo", class:'form-control_2'%>
               </div>
@@ -27,7 +29,7 @@
           </div>
           <div class="col-md-6">
             <div class="panel panel-Aka">
-              <div class="panel-heading">  <%= form.label :Do_you_have_seats? %></div>
+              <div class="panel-heading"style="background-color: #0086bc;"><font color="white">  <%= form.label :Do_you_have_seats? %></font></div>
               <div class="panel-body">
 
                 <%= form.select(:seats, ['1','2','3','4','5','6'], {}, { :class => 'form-control' }) %>
@@ -43,7 +45,7 @@
         <div class="form-group">
           <div class="col-md-6">
             <div class="panel panel-Aka">
-              <div class="panel-heading">  <%= form.label :What_are_you_riding? %></div>
+              <div class="panel-heading"style="background-color: #0086bc;"><font color="white">  <%= form.label :What_are_you_riding? %></font></div>
               <div class="panel-body">
                 <%= form.text_field :car, id: :trip_car  ,placeholder:"Toyota,Yaris", class:'form-control_2'%>
               </div>
@@ -51,7 +53,7 @@
           </div>
           <div class="col-md-6">
             <div class="panel panel-Aka">
-              <div class="panel-heading">  <%= form.label :When_are_you_leaving?%></div>
+              <div class="panel-heading"style="background-color: #0086bc;"> <font color="white"> <%= form.label :When_are_you_leaving?%></font></div>
               <div class="panel-body">
                 <%= form.text_field :departure, id: :trip_departure, placeholder:"5:50a.m.",class:'form-control_2' %>
               </div>
@@ -63,9 +65,9 @@
         <div class="form-group">
           <div class="col-md-12">
             <div class="panel panel-Aka">
-              <div class="panel-heading">  <%= form.label :What_Do_You_Pass_By? %></div>
+              <div class="panel-heading"style="background-color: #0086bc;"> <font color="white">  <%= form.label :What_Do_You_Pass_By? %></font></div>
               <div class="panel-body">
-                <%= form.text_field :placemarks, id: :trip_PlaceMarks  ,placeholder:"'Walmart San Sebastian, Comercial del Sur,Parque De La Paz'", class:'form-control_2'%>
+                <%= form.text_field :placemarks, id: :trip_placemarks  ,placeholder:"'Walmart San Sebastian, Comercial del Sur,Parque De La Paz'", class:'form-control_2'%>
 
               </div>
             </div>
@@ -75,9 +77,11 @@
 
 
       <div class="actions">
-        <%= form.submit %>
+<br/>
+     <%= form.submit "Create Trip", class:"btn login-btnTrip btn-block1 btn-block-login" %>
       </div>
     </div>
+  </div>
   </div>
 
   <% end %>

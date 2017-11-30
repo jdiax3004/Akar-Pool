@@ -30,8 +30,7 @@
               <div class="panel-heading">  <%= form.label :Do_you_have_seats? %></div>
               <div class="panel-body">
 
-                <%=select_tag(:seats , options_for_select([[1,1],[2,2],[3,3],[4],[5],[6],[7]]), { :class=>'form-control_trip'} ) %>
-
+                <%= form.select(:seats, ['1','2','3','4','5','6'], {}, { :class => 'form-control' }) %>
 
                 <br/>
 

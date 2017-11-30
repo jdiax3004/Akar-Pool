@@ -5,7 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Names</th>
+      <th>Namesssss</th>
       <th>Seats</th>
       <th>Car</th>
       <th>Departure</th>
@@ -16,12 +16,33 @@
 
   <tbody>
     <% @trips.each do |trip| %>
+
+
+    <div class="row">
+      <div class="col-md-12">
+				<div class="panel panel-info">
+					<div class="panel-heading "  > <div class="large"><font color="white"><b><%= trip.names %></b></font></div></div>
+          <div class="panel-body">
+            <label for=Seats><font color="black" size="5"><i class="fa fa-users " aria-hidden="true"></i>  Seats:  <%= trip.seats %></font></label>
+					</div>
+          <div class="panel-body">
+            <label for=Model ><font color="black" size="5"><i class="fa fa-car " aria-hidden="true"></i>  Car Model:  <%= trip.car %></font></label>
+					</div>
+          <div class="panel-body">
+            <label for=Departure ><font color="black" size="5">  <i class="fa fa-clock-o " aria-hidden="true"></i>  Departure Time  <%= trip.departure %></font></label>
+					</div>
+          <div class="panel-body">
+            <label for=Placemarks ><font color="black" size="5">   <i class="fa  fa-map-marker " aria-hidden="true"></i>  Placemarks:  <%= trip.placemarks %></font></label>
+					</div>
+				</div>
+			</div>
+		</div>
       <tr>
-        <td><%= trip.names %></td>
+        <td></td>
         <td><%= trip.seats %></td>
         <td><%= trip.car %></td>
         <td><%= trip.departure %></td>
-        <td><%= trip.PlaceMarks %></td>
+        <td><%= trip.placemarks %></td>
         <td><%= link_to 'Show', trip %></td>
         <td><%= link_to 'Edit', edit_trip_path(trip) %></td>
         <td><%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' } %></td>

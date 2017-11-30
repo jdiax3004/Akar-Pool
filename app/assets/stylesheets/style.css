@@ -337,7 +337,9 @@ a.label:hover, a.label:focus {
   padding-top: 20px; }
 
 .panel-heading .fa-toggle-up, .panel-heading .fa-toggle-down {
-  font-size: 17px; }
+  font-size: 17px;
+  background-color: #f9243f; }
+ }
 
 .panel-primary > .panel-heading {
   background-color: #30a5ff;
@@ -410,7 +412,6 @@ a.label:hover, a.label:focus {
   letter-spacing: 0.025em;
   height: 60px;
   line-height: 38px;
-  background: none;
 }
 
 .panel-default .panel-heading {

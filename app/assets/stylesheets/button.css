@@ -31,3 +31,8 @@ font-size: 13px;
 .btn-block-signup{
   font-size: 21px;
 }
+
+.panel-body_T {
+  padding: 15px;
+   background-color:#0086bc !important;
+}

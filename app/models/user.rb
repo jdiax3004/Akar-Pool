@@ -15,7 +15,7 @@ class User
   field :categoria,              type: String, default: ""
   field :encrypted_password, type: String, default: ""
 
-  embeds_one :site, class_name: "Site"
+  embeds_many :sites
 
   ## Recoverable
   field :reset_password_token,   type: String

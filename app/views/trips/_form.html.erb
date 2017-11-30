@@ -11,7 +11,7 @@
 </div>
 <% end %>
 <center>
-
+  
   <div class="row">
 
     <div class="panel-body">
@@ -19,7 +19,7 @@
         <div class="form-group">
           <div class="col-md-6">
             <div class="panel panel-Aka">
-               <div class="panel-heading">  <%= form.label :From_Where_to_Where? %></div>
+              <div class="panel-heading">  <%= form.label :From_Where_to_Where? %></div>
               <div class="panel-body">
                 <%= form.text_field :names, id: :trip_names, placeholder:"Escazu to Hatillo", class:'form-control_2'%>
               </div>
@@ -30,10 +30,8 @@
               <div class="panel-heading">  <%= form.label :Do_you_have_seats? %></div>
               <div class="panel-body">
 
-                x=    <%=select_tag(:seats , options_for_select([[1,1],[2,2],[3,3],[4],[5],[6],[7]]), { :class=>'form-control_trip'} ) %>
-                @trip = Trip.new
-                @trip = x
-                @trip.save
+                <%=select_tag(:seats , options_for_select([[1,1],[2,2],[3,3],[4],[5],[6],[7]]), { :class=>'form-control_trip'} ) %>
+
 
                 <br/>
 
@@ -48,7 +46,7 @@
             <div class="panel panel-Aka">
               <div class="panel-heading">  <%= form.label :What_are_you_riding? %></div>
               <div class="panel-body">
-                  <%= form.text_field :car, id: :trip_car  ,placeholder:"Toyota,Yaris", class:'form-control_2'%>
+                <%= form.text_field :car, id: :trip_car  ,placeholder:"Toyota,Yaris", class:'form-control_2'%>
               </div>
             </div>
           </div>
@@ -68,7 +66,7 @@
             <div class="panel panel-Aka">
               <div class="panel-heading">  <%= form.label :What_Do_You_Pass_By? %></div>
               <div class="panel-body">
-              <%= form.text_field :PlaceMarks, id: :trip_PlaceMarks  ,placeholder:"'Walmart San Sebastian, Comercial del Sur,Parque De La Paz'", class:'form-control_2'%>
+                <%= form.text_field :PlaceMarks, id: :trip_PlaceMarks  ,placeholder:"'Walmart San Sebastian, Comercial del Sur,Parque De La Paz'", class:'form-control_2'%>
 
               </div>
             </div>

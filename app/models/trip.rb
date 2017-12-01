@@ -6,4 +6,6 @@ class Trip
   field :departure, type: String
   field :placemarks, type: String
   belongs_to :user
+
+  scope :look, ->{ where(user:current_user) }
 end

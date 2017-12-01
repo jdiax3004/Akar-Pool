@@ -6,16 +6,23 @@ class TripsController < ApplicationController
   # GET /trips.json
   def index
     @trips = Trip.all
+     @id = Trip.all(params[:id])
   end
 
   # GET /trips/1
   # GET /trips/1.json
   def show
+    @id = params[:id]
+
   end
 
   # GET /trips/new
   def new
     @trip = Trip.new
+      @id = params[:id];
+  end
+
+  def filter
   end
 
   # GET /trips/1/edit
@@ -71,6 +78,6 @@ class TripsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def trip_params
-      params.require(:trip).permit(:names, :seats, :car, :departure, :placemarks)
+      params.require(:trip).permit(:names, :seats, :car, :departure, :placemarks, :search)
     end
 end

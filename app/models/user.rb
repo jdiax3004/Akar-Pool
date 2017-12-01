@@ -12,7 +12,7 @@ class User
   field :cellphone,              type: String, default: ""
   field :photo,              type: String, default: ""
   field :email,              type: String, default: ""
-  field :puntos,              type: Integer, default: ""
+  field :points,              type: Integer, default: "100"
   field :categoria,              type: String, default: ""
   field :encrypted_password, type: String, default: ""
   has_mongoid_attached_file :avatar

@@ -5,4 +5,5 @@ class Trip
   field :car, type: String
   field :departure, type: String
   field :placemarks, type: String
+  belongs_to :user
 end

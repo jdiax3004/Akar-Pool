@@ -6,7 +6,7 @@
 
 
   <tbody>
-    <% @trips.where(:departure=>'5:50a.m.').each  do |trip| %>
+    <% @trips.each  do |trip| %>
 
 
     <div class="row">
@@ -24,6 +24,17 @@
             </div>
           </div>
 
+          <div class="row">
+            <div class="col-md-12">
+              <center>
+                <%= image_tag google_map(center: "San Jose, Costa Rica"), :class => "map img-responsive" %>
+              </center>
+            </div>
+          </div>
+
+          <div class="panel-body">
+            <label for=Departure ><font color="#0086bc" size="4">  <i class="fa fa-user" aria-hidden="true"></i> <font color="Gray"> Driver:  <font color="black"><%= trip.user.nil? ? "" : trip.user.name %> <%=  trip.user.nil? ? "" : trip.user.last_name %></font></font></label>
+          </div>
           <div class="panel-body">
             <label for=Departure ><font color="#0086bc" size="4">  <i class="fa fa-clock-o " aria-hidden="true"></i> <font color="Gray"> Departure Time:  <font color="black"><%= trip.departure %></font></font></label>
           </div>
@@ -38,23 +49,14 @@
           </div>
           <hr>
           <div class="panel-body">
-            <font color="white"><b><%= link_to '<i class="fa fa-edit " aria-hidden="true"></i> Edit    '.html_safe, edit_trip_path(trip) %><span style="margin-left: 5em;"><%= link_to '           <i class="fa fa-close " aria-hidden="true"></i> Delete'.html_safe, trip, method: :delete, data: { confirm: 'Are you sure?' } %></b></span></font>
+
+              <font color="white"><b><%= link_to '<i class="fa fa-edit " aria-hidden="true"></i> Join    '.html_safe, edit_trip_path(trip) %><span style="margin-left: 5em;"><% if current_user ==  trip.user %><%= link_to '<i class="fa fa-edit " aria-hidden="true"></i> Edit    '.html_safe, edit_trip_path(trip) %><span style="margin-left: 5em;"><%= link_to '           <i class="fa fa-close " aria-hidden="true"></i> Delete'.html_safe, trip, method: :delete, data: { confirm: 'Are you sure?' } %></b></span><% end %></font>
           </div>
-
-
-
-
-
         </div>
       </div>
     </div>
 
     <% end %>
-    <div class="row">
-    <div class="col-md-12">
-    <font color="white"><%= link_to 'New Trip', new_trip_path,class:"btn login-btnTrip1 btn-block btn-block-login" %></b></span></font>
-  </div>
-  </div>
   </tbody>
 </table>
 

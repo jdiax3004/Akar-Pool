@@ -19,6 +19,7 @@ class User
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
   belongs_to :site
+  has_many :trips
 
   ## Recoverable
   field :reset_password_token,   type: String

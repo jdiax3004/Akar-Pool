@@ -5,7 +5,7 @@
       <center><div class=".col-md-12">
         <div class="profile_userpic">
         <% if current_user.avatar.exists? %>
-          <%= image_tag current_user.avatar.url, size: "128",:class=>"profile_userpic"%>
+          <%= image_tag current_user.avatar.url, size: "128",:class=>"rounded"%>
         <% else %>
           <%= image_tag "default.png", size: "128",:class=>"profile_userpic"%>
         <% end %>
